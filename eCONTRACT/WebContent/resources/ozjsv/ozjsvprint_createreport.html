@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<title>
+	OZHTML5Viewer Test
+</title>
+<!-- jquery lib -->
+<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>	
+<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" type="text/css"/>
+
+<!-- oz html5 for print -->
+<link href="http://127.0.0.1:80/oz/2013_0227_101_jsv/ui.dynatree.css" rel="stylesheet" type="text/css" />
+<link href="http://127.0.0.1:80/oz/2013_0227_101_jsv/ui.jqgrid.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://127.0.0.1:80/oz/2013_0227_101_jsv/grid.locale-en.js" charset="utf-8"></script>	
+<script type="text/javascript" src="http://127.0.0.1:80/oz/2013_0227_101_jsv/jquery.dynatree.js" charset="utf-8"></script>	
+<script type="text/javascript" src="http://127.0.0.1:80/oz/2013_0227_101_jsv/jquery.jqGrid.js" charset="utf-8"></script>
+
+<!-- oz html5 lib -->
+<script type="text/javascript" src="http://127.0.0.1:80/oz/2013_0227_101_jsv/OZJSViewer.js" charset="utf-8"></script>
+
+<script type="text/javascript">
+ function callReport(ozrname) {
+  document.getElementById("ozviewer").Script("close"); // 뷰어안의 보고서가 있으면 없애기
+  var strOZViewerInfo = "";
+  strOZViewerInfo += "viewer.mode=preview\n";
+  strOZViewerInfo += "connection.servlet=http://127.0.0.1:80/oz/server.aspx\n";
+  if (ozrname == "null" || ozrname == "") {
+   strOZViewerInfo += "connection.reportname=two.ozr\n"; 
+  } else {
+	//alert(ozrname);
+   strOZViewerInfo += "connection.reportname="+ozrname+".ozr\n"; 
+  }
+  strOZViewerInfo += "odi.odinames=two\n"; 
+  strOZViewerInfo += "connection.datafromserver=false\n"; 
+  strOZViewerInfo += "odi.two.usescheduleddata=ozp:///two.sdm\n"; 
+  strOZViewerInfo += "odi.odinames=two\n"; 
+  strOZViewerInfo += "viewer.pagedisplay=continuous\n"; 
+  strOZViewerInfo += "viewer.viewmode=fittowidth\n"; 
+  
+  document.getElementById("ozviewer").CreateReport(strOZViewerInfo);
+ }
+</script> 
+
+</head>
+<script type="text/javascript">
+function OZPostCommand_ozviewer(cmd,msg)
+{
+        alert(cmd);
+        alert(msg);
+}
+</script>
+<script type="text/javascript">
+function OZProgressCommand_ozviewer(cmd,msg,reportname)
+{
+        alert(cmd);
+        alert(msg);
+}
+</script>
+<script type="text/javascript">
+function OZPrintCommand_ozviewer(cmd,msg,reportname,a,b,c,d,e)
+{
+        alert(cmd);
+        alert(msg);
+}
+</script>
+<script type="text/javascript">
+function OZExportCommand_ozviewer(cmd,msg,reportname)
+{
+        alert(cmd);
+        alert(msg);
+}
+</script>
+<script type="text/javascript">
+function attachMemo()
+{
+        var oz;
+		oz = document.getElementById("ozviewer");
+		//oz.Script("attachMemo");
+		oz.ScriptEx("save","export.format=xls;export.path=C:\;export.filename=1.xls;export.confirmsave=false;export.mode=silent",";");
+}
+</script>
+<body>
+
+<Button onclick='callReport("둘");' id="btnrun" disabled>RUN REPORT</Button>	
+<Button onclick="attachMemo();">SAVE</Button>
+	<div id="ozviewer" style="width:100%;height:500px;overflow:hidden"></div>
+	<script type="text/javascript" >
+		function SetOZParamters_ozviewer()
+		 {
+			var oz;
+			
+			oz = document.getElementById("ozviewer");
+
+			if(oz != null && oz != undefined){
+				document.getElementById("btnrun").disabled = false;
+			}
+
+			oz.sendToActionScript("viewer.emptyframe","true");
+			oz.sendToActionScript("viewer.postcommand", "true;true");
+			oz.sendToActionScript("viewer.progresscommand", "true");
+			oz.sendToActionScript("viewer.exportcommand", "true");
+			oz.sendToActionScript("viewer.printcommand", "true");
+			
+			oz.sendToActionScript("viewer.useractioncommand", "true");
+			oz.sendToActionScript("toolbar.open", "true");
+
+
+
+			/*
+			oz.sendToActionScript("connection.servlet","http://127.0.0.1:80/oz/server.aspx");
+			oz.sendToActionScript("connection.reportname","two.ozr");
+			oz.sendToActionScript("odi.odinames","two");
+
+			oz.sendToActionScript("connection.datafromserver","false");
+			oz.sendToActionScript("odi.two.usescheduleddata","ozp:///two.sdm");
+
+			//oz.sendToActionScript("viewer.useprogressbar","false");
+			//oz.sendToActionScript("toolbar.all","false");
+			
+			//oz.sendToActionScript("viewer.bgcolor","ffffff");
+			//oz.sendToActionScript("viewer.useoutborder","false");
+			oz.sendToActionScript("viewer.pagedisplay","continuous");
+
+			oz.sendToActionScript("viewer.viewmode","fittowidth");
+			*/
+			return true;
+		}
+		start_ozjs("ozviewer", "http://127.0.0.1:80/oz/2013_0227_101_jsv/");
+     </script>
+ 
+</body>
+</html>

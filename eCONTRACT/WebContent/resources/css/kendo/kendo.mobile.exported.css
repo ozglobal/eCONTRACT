@@ -1,0 +1,31 @@
+.km-tabstrip .km-button.km-state-active {
+    background-color: rgb(233,233,233);
+}
+.km-tabstrip .km-button {
+    background-color: rgb(15, 173, 0);
+}
+.km-tabstrip .km-button .km-icon {
+    color: rgba(34,34,34,0.4);
+}
+.km-tabstrip .km-state-active span.km-icon {
+    color: rgb(51,181,229);
+}
+.km-content {
+    background-color: rgba(34,34,34,0.4);
+}
+.km-content .km-list > li {
+    background-color: rgb(255, 148, 0);
+}
+.km-content .km-listgroupinset .km-group-title {
+    color: rgb(204, 204, 204);
+}
+.km-button {
+    color: rgba(34,34,34,0.4);
+}
+.km-tabstrip {
+    background-color: rgb(233,233,233);
+}
+
+.km-tabstrip .km-text{
+	color: rgba(34,34,34,0.4);
+}

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-4.1.xsd">
+ 	
+	<bean id="dataSource"
+		 class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+         
+		<property name="driverClassName" value="${database.driverClassName}" />
+		<property name="url" value="${database.url}" />
+		<property name="username" value="${database.username}" />
+		<property name="password" value="${database.password}" />		
+	</bean>
+	
+	<!-- C3P0 properties  
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close" >
+	        <property name="driverClass" value="${database.driverClassName}" />
+	        <property name="jdbcUrl" value="${database.url}" />
+	        <property name="user" value="${database.username}" />
+	        <property name="password" value="${database.password}" /> 
+	        <property name="acquireIncrement" value="3" />
+	        <property name="minPoolSize" value="10" />
+	        <property name="maxPoolSize" value="30" />
+	        <property name="maxIdleTime" value="0" />
+	        <property name="testConnectionOnCheckin" value="true" />
+	        <property name="idleConnectionTestPeriod" value="300" />
+	        <property name="maxIdleTimeExcessConnections" value="240" />
+	</bean>
+	-->
+	 
+ 	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+   		<property name="location">
+			<value>WEB-INF/jdbc.properties</value>
+   		</property>
+	</bean>
+	
+</beans>

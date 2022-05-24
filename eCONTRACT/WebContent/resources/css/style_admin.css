@@ -1,0 +1,380 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+html {
+	height: 100%;
+}
+body{
+	min-height: 100%;
+}
+
+body, ul, h1, h2, p {
+	margin:0;
+	padding:0;
+	font-family:'Open Sans', sans-serif;
+}
+a {text-decoration:none;}
+li {list-style-type:none;}
+img {border:none;}
+
+.clearfix:after {content:" "; display:block; clear:both;}
+
+
+/* -------------------------------------------------------------- admin 화면 */
+
+#admin_header {
+	position:relative;
+	width:100%;
+	height:60px;
+	min-width:1200px;
+	background-color:#5f5f5f;
+}
+
+#admin_header #admin_logo{
+	float : left
+}
+
+/* 메뉴 */
+#admin_gnb {
+	z-index: 3;
+	resize: both;
+	width:125px;
+	height:100%;
+	min-height:500px;
+	position: absolute;
+	background-color:#333a4d;
+}
+
+#gnb_left {
+	float: left;
+}
+
+#gnb_right {
+	float: right;
+}
+
+#gnb_right span{
+	margin-right: 20px;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+#main-menu{
+	position: absolute; top:0px;
+}
+#main-menu ul{
+	visibility : hidden;
+	position: absolute; top:0px;
+}
+
+#main-menu li{
+	position: relative;
+}
+
+/* dashboard hover */
+a.dashboard {
+
+	display:block; 
+	width:125px;
+	height:100px;
+	background:url(../images/btn01.png) no-repeat;
+}
+
+a:hover.dashboard{
+	
+	
+	background-color:#29b3e1;
+}
+
+a.dashboard span{
+
+	display:none;
+}
+
+
+/* scheduler hover */
+a.scheduler {
+	display:block; 
+	width:125px;
+	height:100px;
+	background:url(../images/btn02.png) no-repeat;
+}
+
+a:hover.scheduler{
+	
+	background-color:#29b3e1;
+}
+
+a.scheduler span{
+	display:none;
+}
+
+a.scheduler_sub {
+	display:block; 
+	width:200px;
+	height:40px;
+	background-color: rgb(62, 68, 92);
+	padding-left: 18px;
+	line-height: 40px;
+	color: white;
+}
+
+a:hover.scheduler_sub{
+	background-color:#29b3e1;
+}
+
+a.scheduler_sub2 {
+	display:block; 
+	width:200px;
+	height:40px;
+	background-color: rgb(62, 68, 92);
+	padding-left: 18px;
+	line-height: 40px;
+	color: white;
+}
+
+a:hover.scheduler_sub2 {
+	background-color:#29b3e1;
+}
+
+/* customer hover */
+a.customer {
+
+	display:block; 
+	width:125px;
+	height:100px;
+	background:url(../images/btn03.png) no-repeat;
+}
+
+a:hover.customer{
+	
+	background-color:#29b3e1;
+}
+
+a.customer span{
+
+	display:none;
+}
+
+/* contract hover */
+a.contract {
+
+	display:block; 
+	width:125px;
+	height:100px;
+	background:url(../images/btn04.png) no-repeat;
+}
+
+a:hover.contract{
+	
+	background-color:#29b3e1;
+}
+
+a.contract span{
+	display:none;
+}
+
+a.contract_sub {
+	display:block; 
+	width:200px;
+	height:40px;
+	background-color: rgb(62, 68, 92);
+	padding-left: 18px;
+	line-height: 40px;
+	color: white;
+}
+
+a:hover.contract_sub{
+	background-color:#29b3e1;
+}
+
+a.contract_sub2 {
+	display:block; 
+	width:200px;
+	height:40px;
+	background-color: rgb(62, 68, 92);
+	padding-left: 18px;
+	line-height: 40px;
+	color: white;
+}
+
+a:hover.contract_sub2 {
+	background-color:#29b3e1;
+}
+
+/* part hover */
+a.part {
+
+	display:block; 
+	width:125px;
+	height:100px;
+	background:url(../images/btn05.png) no-repeat;
+}
+
+a:hover.part{
+	
+	background-color:#29b3e1;
+}
+
+a.part span{
+
+	display:none;
+}
+
+/* check hover */
+a.check {
+
+	display:block; 
+	width:125px;
+	height:100px;
+	background:url(../images/btn06.png) no-repeat;
+}
+
+a:hover.check{
+	
+	background-color:#29b3e1;
+}
+
+a.check span{
+
+	display:none;
+}
+
+
+/* usermanage hover */
+a.usermanage {
+
+	display:block; 
+	width:125px;
+	height:100px;
+	background:url(../images/btn07.png) no-repeat;
+}
+
+a:hover.usermanage{
+	
+	background-color:#29b3e1;
+}
+
+a.usermanage span{
+
+	display:none;
+}
+
+/* report hover */
+a.report {
+	display:block; 
+	width:125px;
+	height:100px;
+	background:url(../images/btn10.png) no-repeat;
+}
+
+a:hover.report{
+	background-color:#29b3e1;
+}
+
+a.report span{
+	display:none;
+}
+
+a.report_sub {
+	display:block; 
+	width:200px;
+	height:40px;
+	background-color: rgb(62, 68, 92);
+	padding-left: 18px;
+	line-height: 40px;
+	color: white;
+}
+
+a:hover.report_sub{
+	background-color:#29b3e1;
+}
+
+
+/* configration hover */
+a.configuration {
+
+	display:block; 
+	width:125px;
+	height:100px;
+	background:url(../images/btn08.png) no-repeat;
+}
+
+a:hover.configuration{
+	
+	background-color:#29b3e1;
+}
+
+a.configuration span{
+
+	display:none;
+}
+
+
+#admin_contents {
+	height: 100%;
+	margin-left:30px;
+	margin-top:60px;
+	margin-bottom:30px;
+	margin-right:30px;
+	min-width:1024px;
+}
+
+#admin_contents h2 {
+
+	color:#333a4d;
+	font-size:24px;
+	font-weight:500;
+	margin-top:20px;
+	margin-bottom:7px;
+	margin-left:7px;
+	letter-spacing:-0.5px;
+}
+
+#admin_contents img {
+	
+	vertical-align:middle;
+	padding-right:7px;
+}
+
+.signup-logo {
+	font-size: x-large;
+	text-align: center;
+	font-weight: 700;
+	margin-bottom: 5px;
+}
+
+/* -------------------------------------------------------------- modal 로딩 처리 */
+.modal_load {
+    display:    none;
+    position:   fixed;
+    z-index:    1000;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+    background: rgba( 255, 255, 255, .8 ) 
+                url('http://i.stack.imgur.com/FhHRx.gif') 
+                50% 50% 
+                no-repeat;
+}
+
+.loading {
+    overflow: hidden;   
+}
+
+.loading .modal_load {
+    display: block;
+}
+
+/* -------------------------------------------------------------- TOOLTIP */
+.k-widget.k-tooltip-validation,
+.k-widget.k-tooltip.k-popup.k-group.k-reset{
+	background-color: white;
+}
+
+
+/* -------------------------------------------------------------- * 처리  */
+.required_red {
+	color: red;
+}

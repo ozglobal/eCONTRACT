@@ -1,0 +1,224 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body, ul, h1, h2, p, button, input {
+	margin:0;
+	padding:0;
+	font-family:'Open Sans', sans-serif;
+}
+a {text-decoration:none;}
+li {list-style-type:none;}
+img {border:none;}
+
+
+hr {
+	margin:0;
+	border: 0;
+	border-top: 1px solid #cacaca;
+}
+
+
+.clearfix:after {content:" "; display:block; clear:both;}
+
+
+#header {
+	
+	position:relative;
+	width:100%;
+	height:60px;
+	min-width:1200px;
+}
+
+
+#header img#main_logo {
+	margin-left:88px;
+}
+
+#header #main_gnb {
+	
+	position:absolute;
+	font-size:18px;
+	color:#fff;
+	right:88px;
+	top:19px;
+}
+
+
+#header #main_gnb li {
+
+	float:left;
+	font-weight:bold;
+}
+
+#header #main_gnb li a {
+
+	margin-left:40px;
+	color:#000;
+}
+
+
+#header #main_gnb li a:hover {
+
+	color:#29b3e1;
+}
+
+
+#login {
+	
+	position:relative;
+	width:510px;
+	height:450px;
+	margin:0 auto;
+	background-color:#eeeeee;
+	border-radius:14px;
+	margin-top:180px;
+}
+
+#login .login_logo {
+	padding-top:20px;
+	padding-left:130px;
+}
+
+#login .button1 {	
+	border: none;
+	position:absolute;
+	left:45px;
+	top:150px;
+	width:420px;
+	padding-top:11px;
+	padding-left: 10px;
+	padding-bottom:11px;
+	background-color:#fff;
+	/* border-radius:6px; */
+	font-size: 18px;
+}
+
+#login .button2 {	
+	border: none;
+	position:absolute;
+	left:45px;
+	top:210px;
+	width:420px;
+	padding-top:11px;
+	padding-left: 10px;
+	padding-bottom:11px;
+	background-color:#fff;
+	/* border-radius:6px; */
+	font-size: 18px;
+}
+
+
+#login .button3 {	
+	position:absolute;
+	left:45px;
+	top:160px;
+	font-size:25px;
+	width:420px;
+	padding-top:12px;
+	padding-bottom:12px;
+	background-color:#4d637b;
+	/* border-radius:6px; */
+	color:#fff;
+}
+
+#login .button3 a{
+	color:#fff;
+}
+
+#login .check_auto {	
+	position:absolute;
+	left:45px;
+	top:350px;
+	font-size:25px;
+}
+
+#login font {	
+	position:absolute;
+	left:45px;
+	top:350px;
+	font-size:15px;
+}
+
+#login .id_lost {	
+	position:absolute;
+	left:110px;
+	top:380px;
+	font-size:16px;
+	width:200px;
+	/* border-radius:6px; */
+}
+
+#login .id_lost a {
+
+	color:#29b3e1;
+	text-decoration:underline;
+}
+
+#login .id_lost a:hover {
+
+	color:#4d637b;
+}
+
+
+#login .Sign_up {	
+
+	position:absolute;
+	right:130px;
+	top:380px;
+	font-size:16px;
+	width:120px;
+	/* border-radius:6px; */
+}
+
+#login .Sign_up a {
+
+	color:#29b3e1;
+	text-decoration:underline;
+}
+
+#login .Sign_up a:hover {
+
+	color:#4d637b;
+}
+
+/* TOOLTIP */
+.k-widget.k-tooltip-validation,
+.k-widget.k-tooltip.k-popup.k-group.k-reset{
+	background-color: white;
+}
+
+/*body style*/
+.body-box {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0;
+	border: 0;
+}
+
+/* -------------------------------------------------------------- modal 로딩 처리 */
+.modal_load {
+    display:    none;
+    position:   fixed;
+    z-index:    1000;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+    background: rgba( 255, 255, 255, .8 ) 
+                url('http://i.stack.imgur.com/FhHRx.gif') 
+                50% 50% 
+                no-repeat;
+}
+
+.loading {
+    overflow: hidden;   
+}
+
+.loading .modal_load {
+    display: block;
+}
+
+/* -------------------------------------------------------------- * 처리  */
+.required_red {
+	color: red;
+}

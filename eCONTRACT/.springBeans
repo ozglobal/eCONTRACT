@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beansProjectDescription>
+	<version>1</version>
+	<pluginVersion><![CDATA[3.6.3.201411271034-RELEASE]]></pluginVersion>
+	<configSuffixes>
+		<configSuffix><![CDATA[xml]]></configSuffix>
+	</configSuffixes>
+	<enableImports><![CDATA[false]]></enableImports>
+	<configs>
+	</configs>
+	<autoconfigs>
+		<config>WebContent/WEB-INF/j-amazon.xml</config>
+		<config>WebContent/WEB-INF/spring-config-security.xml</config>
+		<config>WebContent/WEB-INF/j-mail.xml</config>
+		<config>WebContent/WEB-INF/spring-datasource.xml</config>
+		<config>WebContent/WEB-INF/j-servlet.xml</config>
+		<config>WebContent/WEB-INF/j-holiday.xml</config>
+		<config>WebContent/WEB-INF/j-context.xml</config>
+	</autoconfigs>
+	<configSets>
+	</configSets>
+</beansProjectDescription>
